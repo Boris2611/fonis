@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Limit Engine</title>
+</head>
+<body>
+    
+    <header>
+        <img class="logo" src="media/logo.png">
+        <h1 class="header_text">Raiffeisen Bank - Limit Engine </h1>
+        <h1 class="header_text_1">Limit Engine </h1>
+        
+    </header>
+
+
+
+
+    <div id="popup" onclick="done()" class="popup">
+        <h1 class="text">Bonitet - Značenje:
+        </h1>
+        <p class="p_text">Bonitet je pojam latinskog porekla, nastao od latinske reči bonitas / bonus,
+            što u prevodu znači – dobar, vredan, kvalitetan, valjan, a ujedno predstavlja i
+            skup osobina jednog subjekta. Bonitet podrazumeva formalno i materijalno svojstvo
+            subjekata koje ga čine sigurnim dužnikom"</p>
+    </div>
+
+<div class="big_div">
+    
+    <div class="box">
+    <h1 class="text">O Problemu</h1>
+    <p class="p_text">Podizanje kredita za pravna lica radnicima u banci predstavlja određeni problem. To je jedan od najtežih poslova
+        jer sa sobom nosi određeni rizik i veliku odgovornost. Bankari se često susreću sa rizičnim potencijalnim 
+        klijentima i često im potrebna pomoć oko odlučivanja. Adekvatno rešenje za takav problem bi bio softver
+        koji može sa velikom preciznošću da utvrdi <b onclick="bonitet()">bonitet</b> klijenta.
+    </p>
+    </div>
+
+    <div class="box">
+    <h1 class="text">Limit Engine</h1>
+    <p class="p_text">
+        Limit Engine (LE) je trenutno ideja koja može da se implementira u bankarski sistem i pomogne radnicima da eliminušu 
+        rizčne klijente, da preporuku na osnovu ranijih iskustava i izračuna limit trazenog kredita.
+    </p>
+    </div>
+</div>
+
+
+
+    <div class="box">
+
+        <h1 class="text">Eliminacioni Kriterijumi:</h1>
+
+
+        <div class="big_div">
+
+        <div class="div1">
+        <ul class="list1">
+            <h3>Nefinansijski:</h3>
+            <li>- Datum osnivanja preduzeća (Vreme poslovanja preduzeca).</li>
+            <li>- Da preduzeće posluje bar 15 meseci i ima bar jedan završni račun.</li>
+            <li>- Preduzeće mora da ima uredan kreditni biro, Ne sme da bude predužen.</li>
+            <li>- Da nije imao blokadu u određenom vremenskom periodu.</li>
+            <li>- Da je pravo lice rezident.</li>
+        </ul>
+    </div>
+
+
+    <div class="div2">
+        <ul class="list2">
+            <h3>Finansijski:</h3>
+            <li>- Dobitak na kraju godine.</li>
+            <li>- Imovina preduzeća i hipoteke.</li>
+            <li>- Ukupna vrednost lilvidnih sredstava.</li>
+            <li>- Racio likvidnosti.</li>
+            <li>- Finanskijski rezultat.</li>
+        </ul>
+    </div>
+
+    </div>
+    </div>
+
+
+    <div class="box">
+
+        <h1 class="text">Ključni Faktori:</h1>
+
+
+        <div class="big_div">
+
+        <div class="div1">
+        <ul class="list1">
+            <h3>Nefinansijski:</h3>
+            <li>- Datum osnivanja preduzeća (Vreme poslovanja preduzeca).</li>
+            <li>- Tržišna pozicija.</li>
+            <li>- Tržišni rizici.</li>
+            <li>- Tržišni poremećaj.</li>
+            <li>- Delatnost kojom se preduzeće bavi.</li>
+            <li>- Promena delatnosti.</li>
+            <li>- Promena vlasnika.</li>
+        </ul>
+    </div>
+    
+
+
+    <div class="div2">
+        <ul class="list2">
+            <h3>Finansijski:</h3>
+            <li>- Dobitak na kraju godine.</li>
+            <li>- Imovina preduzeća i hipoteke.</li>
+            <li>- Ukupna vrednost lilvidnih sredstava.</li>
+            <li>- Racio likvidnosti.</li>
+            <li>- Finanskijski rezultat.</li>
+        </ul>
+    </div>
+
+    </div>
+    </div>
+
+    <div onclick="remove()" id="popup2" class="popup2">
+        <h1 class="text">Rezultat:</h1>
+        <p id="info" class="text"></p>
+    </div> 
+
+    <hr>
+
+
+ 
+
+    
+
+    <div class="demo_div">
+        <h1>Limit Engine Demo</h1>
+
+        <p class="paragraf">Ime Preduzeća:</p><br>
+        <input id="name" type="text"><br>
+
+        <p class="paragraf">Godina osnivanja preduzeća:</p><br>
+        <input id="date" type="number"><br>
+
+        <div>
+            <p class="paragraf">Delatnost:</p><br>
+            <datalist id="delatnost">
+                <option>Šumarstvo / Poljoprivreda / Ribarstvo</option>
+                <option>Prerađivačka industrija</option>
+                <option>Snabdevanje električnom energijom, gasom itd.</option>
+                <option>Građevinarstvo</option>
+                <option>Trgovina na veliko / Trgovina na malo</option>
+                <option>Obrazovanje</option>
+                <option>Poslovanje nekretninama</option>
+                <option>Informisanje i komunikacija</option>
+                <option>Saobraćaj i skladištenje</option>
+            </datalist>
+            <input id="delatnostt"  autoComplete="on" list="delatnost"/> 
+        </div>
+
+        <p class="paragraf">Dobitak na kraju godine: (u RSD)</p><br>
+        <input id="dobitak" type="number"><br>
+ 
+        <p class="paragraf">Ukupna vrednost likvidnih sredstva: (u RSD)</p><br>
+        <input id="linkv" type="number"><br>
+
+        <p class="paragraf">Racio likvidnosti: (u %)</p><br>
+        <input id="racio" type="number"><br>
+
+
+
+
+        <p class="paragraf">Promena delatnosti: </p>
+        <input id="promenadelatnosti" type="checkbox"><br>
+
+        <p class="paragraf">Promena vlasnika: </p>
+        <input id="promenavlasnika" type="checkbox"><br>
+
+        <p class="paragraf">Urednost kreditnog biroa:</p>
+        <input id="uredan" type="checkbox"><br>
+
+
+        <button onclick="submit()">Submit</button>
+    </div>
+ 
+
+    <hr>
+
+    
+<div class="big_div">
+
+    <div class="box">
+        <h1 class="text">Princip Rada</h1>
+        <p class="p_text">1) Provera Eliminacionih Kriterijuma<br>
+            2) Izracunavanje Score-a na osnovu kljucnih faktora<br>
+            3) Obrada Score-a i izračunavanje Trust-a<br>
+            4) Izracunavanje Limita<br><br>
+        
+        - Score se izracunava na osnovu kljucnih faktora ako je firma prosla sve eliminacione faktore.<br>
+        - Score nam omogucava izracunavanje Trust-a koji predstavlja procentualnu vrednost/stepen poverenja odredjene firme.<br>
+        - Trust se izracunava na osnovu Score-a kompanije koja trazi kredit u odnosu na ostale kompanije istog trzista.<br>
+        - Limit se izracunava na osnovu Trust-a.<br>
+        </p>
+        </div>
+
+        <div class="box">
+            <h1 class="text">Algoritam</h1>
+            <p class="p_text">
+                Ideja je da se različiti kriterijumi različito boduju.
+                Zbir svih kriterijuma predstavlja Score.<br>
+
+            </p>
+            </div>
+
+
+
+        </div>  
+   
+        <img onclick="soundd()" id = "deda" class="deda" src="media/deda.png">
+
+ 
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
