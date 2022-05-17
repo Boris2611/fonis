@@ -179,9 +179,41 @@ button {
     cursor: pointer;
 }
 
+.image {
+    width: 80%;
+    padding: 10%;
+}
+
+.header_text_2 {
+    float: right;
+    padding: 15px;
+    margin-right: 50px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.qrimage {
+    width: 30%;
+    margin: 0;
+    padding: 20px;
+}
+
+.popupqr {
+    margin-top: -200px;
+    width: 100%;
+    background-color: #444;
+    box-shadow: 0px 10px 10px 0px #666;
+    text-align: center;
+    border: 3px solid #999;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+}
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
     .logo {
         display: none;
@@ -222,6 +254,10 @@ button {
 
     .box {
         margin: 20px;
+    }
+
+    .header_text_2 {
+        display: none;
     }
 
   

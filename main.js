@@ -23,7 +23,7 @@ function submit() {
 
 
 
-    if (2022 - date < 3 || racio < 50 || dobitak < 1 || uredan == true) {
+    if (2022 - date < 3 || racio < 50 || dobitak < 1 || uredan == false) {
         x = 1;
     } 
 
@@ -165,4 +165,13 @@ function soundd() {
     document.getElementById("deda").style.width = "60%";
 
     setInterval(function () {document.getElementById("deda").style.width = "50%";}, 300);
+}
+
+
+function qr() {
+    document.getElementById("popupqr").style.display = "block";
+}
+
+function closeqr() {
+    document.getElementById("popupqr").style.display = "none";
 }
