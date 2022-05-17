@@ -158,6 +158,7 @@ function remove() {
 
 
 let sound = new Audio("media/sound.wav");
+let mozee = new Audio("media/moze.mp3")
 
 function soundd() {
     sound.play();
@@ -174,4 +175,8 @@ function qr() {
 
 function closeqr() {
     document.getElementById("popupqr").style.display = "none";
+}
+
+function moze() {
+    mozee.play();
 }

@@ -14,11 +14,11 @@
         <h1 class="header_text">Raiffeisen Bank - Limit Engine </h1>
         <h1 class="header_text_1">Limit Engine </h1>
         
-        <h2 onclick="qr()" class="header_text_2">QR Code</h2>
+        <h2 onclick="qr(), moze()" class="header_text_2">QR Code</h2>
     </header>
 
 
-    <img class="image" src="media/123.png" >
+    <img onclick="moze()" class="image" src="media/123.png" >
 
 
 
@@ -44,7 +44,7 @@
     <p class="p_text">Podizanje kredita za pravna lica radnicima u banci predstavlja određeni problem. To je jedan od najtežih poslova
         jer sa sobom nosi određeni rizik i veliku odgovornost. Bankari se često susreću sa rizičnim potencijalnim 
         klijentima i često im potrebna pomoć oko odlučivanja. Adekvatno rešenje za takav problem bi bio softver
-        koji može sa velikom preciznošću da utvrdi <b onclick="bonitet()">bonitet</b> klijenta.
+        koji može sa velikom preciznošću da utvrdi <b onclick="bonitet(), moze()">bonitet</b> klijenta.
     </p>
     </div>
 
@@ -207,7 +207,7 @@
         - Score se izracunava na osnovu kljucnih faktora ako je firma prosla sve eliminacione faktore.<br>
         - Score nam omogucava izracunavanje Trust-a koji predstavlja procentualnu vrednost/stepen poverenja odredjene firme.<br>
         - Trust se izracunava na osnovu Score-a kompanije koja trazi kredit u odnosu na ostale kompanije istog trzista.<br>
-        - Limit se izracunava na osnovu Trust-a.<br>
+
         </p>
         </div>
 
@@ -216,6 +216,21 @@
             <p class="p_text">
                 Ideja je da se različiti kriterijumi različito boduju.
                 Zbir svih kriterijuma predstavlja Score.<br>
+
+                Softver računa kreditnu sposobnost firme na osnovu
+                izveštaja koji se dobija iz kreditnog brioa.<br>
+
+                U zavisnosti od formata podataka na različite načine
+                izvlačimo potrebne informacije i snabdevamo algoritam.<br>
+
+                Takođe se izvlače podaci iz poreske uprave radi provere
+                plaćenih dužnosti prema državi.<br>
+
+                Godišnje inflacije su još jedan faktor koji ulazi 
+                u računanje kreditnog limita, posebno na dugoročne kredite.<br>
+
+                Algoritam pravi query na bazu podataka "<a href="https://www.apr.gov.rs/" target="_blank">APR-a</a>" koji sadrži 
+                relevantne podatke za eliminacione kriterijume kao i određeni broj Ključnih faktora.
 
             </p>
             </div>
